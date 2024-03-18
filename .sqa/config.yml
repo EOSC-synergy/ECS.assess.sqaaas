@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/redxdev/ECS:
+      branch: master
+      repo: https://github.com/redxdev/ECS
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/redxdev/ECS git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-sepia-gibbon.sh
+        container: qc.acc_stealthy-alizarin-ibis
+  QC.Doc:
+    repos:
+      github.com/redxdev/ECS find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-goldenrod-squid.sh
+        container: qc.doc_snippy-olivine-rhinoceros
+      github.com/redxdev/ECS git:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-xanthic-dingo.sh
+        container: qc.doc_shaky-aquamarine-cuttlefish
+      github.com/redxdev/ECS markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-cerise-affenpinscher.sh
+        container: qc.doc_trippy-black-deer
+  QC.Lic:
+    repos:
+      github.com/redxdev/ECS licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-teal-badger.sh
+        container: qc.lic_randy-seashell-shark
+  QC.Ver:
+    repos:
+      github.com/redxdev/ECS get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-xanthic-fousek.sh
+        container: qc.ver_dorky-silver-chicken
+timeout: 5400
