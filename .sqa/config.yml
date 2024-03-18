@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 2.0.0
+      branch: release/2.1.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/redxdev/ECS:
       branch: master
@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/redxdev/ECS git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-wisteria-bat.sh
-        container: qc.acc_muggy-maroon-mau
+        - /usr/bin/env sh .sqa/script.snoopy-magenta-nightingale.sh
+        container: qc.acc_stuffy-aqua-yak
   QC.Doc:
     repos:
       github.com/redxdev/ECS find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-salmon-terrier.sh
-        container: qc.doc_sickly-seashell-jellyfish
+        - /usr/bin/env sh .sqa/script.sickly-xanthic-javanese.sh
+        container: qc.doc_cheeky-sangria-dachshund
       github.com/redxdev/ECS git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-bistre-coral.sh
-        container: qc.doc_snappy-auburn-meerkat
+        - /usr/bin/env sh .sqa/script.flabby-amaranth-squirrel.sh
+        container: qc.doc_sloppy-blue-zonkey
       github.com/redxdev/ECS markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-maroon-cow.sh
-        container: qc.doc_fuzzy-jade-beaver
+        - /usr/bin/env sh .sqa/script.jumpy-ivory-dingo.sh
+        container: qc.doc_zippy-amethyst-zonkey
   QC.Lic:
     repos:
       github.com/redxdev/ECS licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-fuchsia-nightingale.sh
-        container: qc.lic_blurry-celadon-chin
+        - /usr/bin/env sh .sqa/script.pretty-ivory-fowl.sh
+        container: qc.lic_skanky-xanthic-chimpanzee
   QC.Ver:
     repos:
       github.com/redxdev/ECS get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-carmine-chinook.sh
-        container: qc.ver_silly-apricot-chipmunk
+        - /usr/bin/env sh .sqa/script.zippy-yellow-stoat.sh
+        container: qc.ver_homely-amethyst-coral
 timeout: 5400
