@@ -15,32 +15,38 @@ sqa_criteria:
     repos:
       github.com/redxdev/ECS git:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-alizarin-barnacle.sh
-        container: qc.acc_randy-dandelion-gibbon
+        - /usr/bin/env sh .sqa/script.stuffy-cinnamon-dolphin.sh
+        container: qc.acc_silly-cerulean-rabbit
   QC.Doc:
     repos:
       github.com/redxdev/ECS find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-aquamarine-cassowary.sh
-        container: qc.doc_ready-flax-crane
+        - /usr/bin/env sh .sqa/script.beady-tomato-frigatebird.sh
+        container: qc.doc_trippy-blue-caracal
       github.com/redxdev/ECS git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-cobalt-whale.sh
-        container: qc.doc_randy-taupe-abyssinian
+        - /usr/bin/env sh .sqa/script.wiggy-fuchsia-anteater.sh
+        container: qc.doc_smelly-salmon-blue
       github.com/redxdev/ECS markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-bistre-russel.sh
-        container: qc.doc_slimy-cobalt-quetzal
+        - /usr/bin/env sh .sqa/script.shaky-cerise-capybara.sh
+        container: qc.doc_bluesy-champagne-pig
   QC.Lic:
     repos:
       github.com/redxdev/ECS licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-cobalt-dachshund.sh
-        container: qc.lic_cloudy-turquoise-vulture
+        - /usr/bin/env sh .sqa/script.wimpy-emerald-akita.sh
+        container: qc.lic_woozy-beige-yak
+  QC.Sty:
+    repos:
+      github.com/redxdev/ECS oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-indigo-serval.sh
+        container: qc.sty_gummy-fuchsia-okapi
   QC.Ver:
     repos:
       github.com/redxdev/ECS get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-lilac-baboon.sh
-        container: qc.ver_breezy-olive-seahorse
+        - /usr/bin/env sh .sqa/script.baggy-carmine-kudu.sh
+        container: qc.ver_skimpy-chestnut-maltese
 timeout: 5400
