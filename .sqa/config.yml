@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.1.0
+      branch: release/2.1.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/redxdev/ECS:
       branch: master
@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/redxdev/ECS git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-cinnamon-dolphin.sh
-        container: qc.acc_silly-cerulean-rabbit
+        - /usr/bin/env sh .sqa/script.baggy-cerulean-indri.sh
+        container: qc.acc_droopy-lime-tuatara
   QC.Doc:
     repos:
       github.com/redxdev/ECS find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-tomato-frigatebird.sh
-        container: qc.doc_trippy-blue-caracal
+        - /usr/bin/env sh .sqa/script.flimsy-pear-wildebeest.sh
+        container: qc.doc_geeky-rose-harrier
       github.com/redxdev/ECS git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-fuchsia-anteater.sh
-        container: qc.doc_smelly-salmon-blue
+        - /usr/bin/env sh .sqa/script.zippy-peach-bat.sh
+        container: qc.doc_fuzzy-peach-malamute
       github.com/redxdev/ECS markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-cerise-capybara.sh
-        container: qc.doc_bluesy-champagne-pig
+        - /usr/bin/env sh .sqa/script.grumpy-taupe-blue.sh
+        container: qc.doc_sunny-white-fowl
   QC.Lic:
     repos:
       github.com/redxdev/ECS licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-emerald-akita.sh
-        container: qc.lic_woozy-beige-yak
+        - /usr/bin/env sh .sqa/script.seedy-peach-woodlouse.sh
+        container: qc.lic_chummy-emerald-sheepdog
   QC.Sty:
     repos:
       github.com/redxdev/ECS oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-indigo-serval.sh
-        container: qc.sty_gummy-fuchsia-okapi
+        - /usr/bin/env sh .sqa/script.snippy-cerise-zebu.sh
+        container: qc.sty_gimpy-sepia-booby
   QC.Ver:
     repos:
       github.com/redxdev/ECS get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-carmine-kudu.sh
-        container: qc.ver_skimpy-chestnut-maltese
+        - /usr/bin/env sh .sqa/script.chewy-aqua-buffalo.sh
+        container: qc.ver_sleepy-carmine-spoonbill
 timeout: 5400

@@ -5,5 +5,5 @@
 
 (
 cd github.com/redxdev/ECS &&
-    oclint sample.cpp ECS.h -- -c
+    oclint  -- -c
 )
